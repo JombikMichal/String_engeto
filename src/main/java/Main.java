@@ -1,4 +1,5 @@
 import org.jetbrains.annotations.NotNull;
+import zoo.Zoo;
 
 public class Main {
 
@@ -46,6 +47,8 @@ public class Main {
         String[] resultFrom7th = lengthyAndShorty("a bb ccc ddda dddb");
         System.out.println("7. Lengthy and shorty - input: a bb ccc ddda dddb (expected output is a && ddda): \nActual output: shorty: " + resultFrom7th[0] + " Lengthy: " + resultFrom7th[1]);
         charCounter2("aabcc");
+
+        Zoo.run();
     }
 
     /**
