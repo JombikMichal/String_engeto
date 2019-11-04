@@ -14,28 +14,28 @@ public class Main {
          * Run -> Edit Configurations -> Program arguments
          */
 
-//        for (String s : args){
-//            System.out.println("String[] args(foreach loop): " + s);
-//            if (containJava(s)){
-//                System.out.println("This is java: " + s);
-//            }
-//        }
-//
-//        for (int i = 0; i < args.length; i++){
-//            System.out.println(String.format("String[] args(for loop): %d: %s",i,args[i]));
-//            if (containJava(args[i])){
-//                System.out.println("This is java: " + args[i]);
-//            }
-//        }
-//
-//        int i = 0;
-//        while (i < args.length){
-//            System.out.println("String[] args(while loop): " + args[i]);
-//            if (containJava(args[i])){
-//                System.out.println("This is java: " + args[i]);
-//            }
-//            i++;
-//        }
+        for (String s : args){
+            System.out.println("String[] args(foreach loop): " + s);
+            if (containJava(s)){
+                System.out.println("This is java: " + s);
+            }
+        }
+
+        for (int i = 0; i < args.length; i++){
+            System.out.println(String.format("String[] args(for loop): %d: %s",i,args[i]));
+            if (containJava(args[i])){
+                System.out.println("This is java: " + args[i]);
+            }
+        }
+
+        int i = 0;
+        while (i < args.length){
+            System.out.println("String[] args(while loop): " + args[i]);
+            if (containJava(args[i])){
+                System.out.println("This is java: " + args[i]);
+            }
+            i++;
+        }
 
         try{
             System.out.println("2. Reverse String(reverseString method) (expected output is dcba): \nActual output: " + reverseString("abcd"));
