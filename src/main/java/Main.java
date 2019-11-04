@@ -69,7 +69,7 @@ public class Main {
      * Input: "abcd"
      * <p>
      * Output: "dcba"
-     *
+     * <p>
      * StringBuilder - why?when?
      * StringBuffer - why?when?
      */
@@ -110,7 +110,7 @@ public class Main {
      * Output: "false"
      */
     static boolean isPalindrome(@NotNull String word) {
-        for (int i = 0; i < word.length()/2; i++) {
+        for (int i = 0; i < word.length() / 2; i++) {
             if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
                 return false;
             }
@@ -182,15 +182,12 @@ public class Main {
      * <p>
      * Output: "a" "ddda"
      */
-    static String[] lengthyAndShorty(String sentence) {
+    static String[] lengthyAndShorty(@NotNull String sentence) {
         String[] arr = sentence.split(" ");
         String[] result = new String[2];
-        try {
-            result[0] = arr[0];
-            result[1] = arr[0];
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        result[0] = arr[0];
+        result[1] = arr[0];
+
         if (arr.length > 1) {
             for (int i = 1; i < arr.length; i++) {
                 if (result[0].length() > arr[i].length()) {
