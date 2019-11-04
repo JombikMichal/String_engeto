@@ -12,6 +12,7 @@ public abstract class Animal {
     }
 
     public abstract void sayHi();
+
     public abstract void eat(Food food);
 
     public int getAge() {

@@ -16,9 +16,9 @@ public class Zebra extends Animal implements Herbivore {
 
     @Override
     public void eat(Food food) {
-        if (food instanceof Grass){
+        if (food instanceof Grass) {
             System.out.println("Hi Im zebra and i love grass(eat(Food food)) " + food.getDescription());
-        }else if(food instanceof Meat) {
+        } else if (food instanceof Meat) {
             System.out.println("Hi Im zebra and i hate meat " + food.getDescription());
         }
     }

@@ -16,9 +16,9 @@ public class Tiger extends Animal {
 
     @Override
     public void eat(Food food) {
-        if (food instanceof Grass){
+        if (food instanceof Grass) {
             System.out.println("Hi Im Tiger and i hate grass " + food.getDescription());
-        }else if(food instanceof Meat) {
+        } else if (food instanceof Meat) {
             System.out.println("Hi Im Tiger and i love meat " + food.getDescription());
         }
     }
