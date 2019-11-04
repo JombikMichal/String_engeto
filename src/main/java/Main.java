@@ -1,19 +1,13 @@
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
 
+    /**
+     * 0. Print program arguments
+     * Print arguments passed to the main method.
+     * Run -> Edit Configurations -> Program arguments
+     */
     public static void main(String[] args) {
-
-        /**
-         * 0. Print program arguments
-         * Print arguments passed to the main method.
-         * Run -> Edit Configurations -> Program arguments
-         */
-
         for (String s : args){
             System.out.println("String[] args(foreach loop): " + s);
             if (containJava(s)){
@@ -62,9 +56,7 @@ public class Main {
      * RESULT:
      *        method .equals() compare value of object
      *        == compare if values has same address in memory
-     *
-     */
-
+     **/
     static boolean containJava(String word){
         return word.toLowerCase().equals("java");
     }
@@ -79,7 +71,6 @@ public class Main {
      * Output: "dcba"
      *
      * */
-
     static String reverseString(@NotNull String word) throws Exception{
         StringBuffer sb = new StringBuffer();
         StringBuffer sbWhile = new StringBuffer();
@@ -115,8 +106,8 @@ public class Main {
      * Input: "abcd"
      *
      * Output: "false"
+     *
      * */
-
     static boolean isPalindrome(@NotNull String word){
         for (int i = 0; i < word.length(); i++){
             if (word.charAt(i) != word.charAt(word.length() - 1 - i)){
@@ -139,7 +130,6 @@ public class Main {
      * Output: false
      *
      * */
-
     static boolean isUpperCase(@NotNull String word){
         for (int i = 0; i < word.length() - 1; i++){
             if(word.charAt(i) != word.toUpperCase().charAt(i)){
@@ -158,7 +148,6 @@ public class Main {
      * Output: "Hello How Are You"
      *
      * */
-
     static String headliner(String sentence){
         StringBuffer sb = new StringBuffer();
         String[] arr = sentence.split(" ");
@@ -177,7 +166,6 @@ public class Main {
      * Output: 3
      *
      * */
-
     static int charCounter(String word, char letter){
         int count = 0;
         for (int i = 0; i < word.length() - 1; i++){
@@ -197,7 +185,6 @@ public class Main {
      * Output: "a" "ddda"
      *
      * */
-
     static String[] lengthyAndShorty(String sentence){
         String[] arr = sentence.split(" ");
         String[] result = new String[2];
@@ -232,7 +219,6 @@ public class Main {
      *      'c' 2
      *
      * */
-
     static void charCounter2(String word){
         char[] arr = getUniqueChars(word).toCharArray();
 
@@ -245,9 +231,7 @@ public class Main {
 
     /**
      * get unique sorted char String
-     *
      * */
-
     private static String getUniqueChars(String word) {
         return word.chars().sorted().distinct()
                 .collect(StringBuilder::new,
