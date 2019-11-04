@@ -39,7 +39,7 @@ public class Zoo {
             animal.sayHi();
         }
 
-        System.out.println("Only zebra with overloaing method");
+        System.out.println("Only zebra with overloading method");
         Zebra zebra = new Zebra(9);
         zebra.eat(new Meat(4, "turkey"));
         zebra.eat(new Grass(3, "chive"));
