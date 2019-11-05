@@ -1,7 +1,9 @@
 import org.jetbrains.annotations.NotNull;
 import sorting_algorithm.BubbleSort;
-import sorting_algorithm.InsertionSort;
+import sorting_algorithm.SelectionSort;
 import zoo.Zoo;
+
+import java.util.Arrays;
 
 public class Main {
 
@@ -53,12 +55,14 @@ public class Main {
         Zoo.run();
 
         int[] arr = {9,2,8,3,4,7,0};
-        BubbleSort bubbleSort = new BubbleSort(arr);
-        //bubbleSort.getDisplayAble().display(bubbleSort.sort());
 
-        System.out.println();
-        InsertionSort insertionSort = new InsertionSort(arr);
+        BubbleSort bubbleSort = new BubbleSort(Arrays.copyOf(arr,arr.length));
+       // bubbleSort.getDisplayAble().display(bubbleSort.sort());
+
+        System.out.println("!!!");
+        SelectionSort insertionSort = new SelectionSort(Arrays.copyOf(arr,arr.length));
         insertionSort.getDisplayAble().display(insertionSort.sort());
+
     }
 
     /**

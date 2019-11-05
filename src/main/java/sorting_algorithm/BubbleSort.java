@@ -41,14 +41,13 @@ public class BubbleSort implements Sort {
      * */
     @Override
     public int[] sort() {
-        int temp = 0;
         boolean sorting = true;
         while (sorting){
             sorting = false;
             for (int i = 1; i < this.numbersArray.length; i++){
                 if(this.numbersArray[i - 1] > this.numbersArray[i]){
                     // if previous number is less than next then swap this numbers and set that in this iteration swapping was performed
-                    temp = this.numbersArray[i - 1];
+                    int temp = this.numbersArray[i - 1];
                     this.numbersArray[i - 1] = this.numbersArray[i];
                     this.numbersArray[i] = temp;
                     sorting = true;
