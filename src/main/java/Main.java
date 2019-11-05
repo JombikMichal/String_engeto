@@ -53,7 +53,7 @@ public class Main {
 
         int[] arr = {9,2,8,3,4,7,0};
         BubbleSort bubbleSort = new BubbleSort(arr);
-        bubbleSort.print();
+        bubbleSort.getDisplayAble().display(bubbleSort.sort());
     }
 
     /**

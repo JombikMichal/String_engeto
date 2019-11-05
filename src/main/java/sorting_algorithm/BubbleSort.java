@@ -1,12 +1,20 @@
 package sorting_algorithm;
 
+import sorting_algorithm.display.Display;
+import sorting_algorithm.display.DisplayAble;
+
 import java.util.Arrays;
 
 public class BubbleSort implements Sort {
     private final int [] numbersArray;
+    private final DisplayAble displayAble = new Display();
 
     public BubbleSort(int[] numbersArray) {
         this.numbersArray = numbersArray;
+    }
+
+    public DisplayAble getDisplayAble() {
+        return displayAble;
     }
 
     public int[] getNumbersArray() {
@@ -39,6 +47,7 @@ public class BubbleSort implements Sort {
             sorting = false;
             for (int i = 1; i < this.numbersArray.length; i++){
                 if(this.numbersArray[i - 1] > this.numbersArray[i]){
+                    // if previous number is less than next then swap this numbers and set that in this iteration swapping was performed
                     temp = this.numbersArray[i - 1];
                     this.numbersArray[i - 1] = this.numbersArray[i];
                     this.numbersArray[i] = temp;
@@ -47,13 +56,5 @@ public class BubbleSort implements Sort {
             }
         }
         return this.numbersArray;
-    }
-
-    public void print(){
-        sort();
-        System.out.print("Output/sorted array: ");
-        for (int i = 0; i < this.numbersArray.length; i++){
-            System.out.print(this.numbersArray[i] + " ");
-        }
     }
 }
