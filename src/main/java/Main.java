@@ -1,4 +1,5 @@
 import org.jetbrains.annotations.NotNull;
+import sorting_algorithm.BubbleSort;
 import zoo.Zoo;
 
 public class Main {
@@ -49,6 +50,10 @@ public class Main {
         charCounter2("aabcc");
 
         Zoo.run();
+
+        int[] arr = {9,2,8,3,4,7,0};
+        BubbleSort bubbleSort = new BubbleSort(arr);
+        bubbleSort.print();
     }
 
     /**
